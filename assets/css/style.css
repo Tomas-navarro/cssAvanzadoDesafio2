@@ -1,22 +1,47 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-.grid-container{
+/* Fonts */
+.poppins-thin {
+    font-family: "Poppins", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+}
+
+.poppins-regular {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.poppins-medium {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.poppins-semibold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.grid-container {
     display: grid;
-    grid-template-areas: 
-    "header header"
-    "aside main"
-    "footer footer";
+    grid-template-areas:
+        "header header"
+        "aside main"
+        "footer footer";
     width: 100%;
     min-height: 100vh;
     grid-template-columns: 2fr 10fr;
-    grid-template-rows: 0.5fr 10fr 0.5fr ;
+    grid-template-rows: 0.5fr 10fr 0.5fr;
 }
 
-header{
+header {
     grid-area: header;
 
     background-color: #26537b;
@@ -26,16 +51,25 @@ header{
     align-items: center;
 
 }
-aside{
-    grid-area: aside;
 
+aside {
+    grid-area: aside;
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: #e7e7e7;
     color: #77818c;
+    
 }
-main{
+aside > ul {
+    text-align: start;
+    color: #393e45;
+}
+aside > ul > span{
+    color: #8c8c8d;
+}
+
+main {
     grid-area: main;
 
     display: flex;
@@ -44,22 +78,25 @@ main{
     gap: 20px;
     flex-wrap: wrap;
 }
-footer{
-    grid-area: footer;
 
+footer {
+    grid-area: footer;
     display: flex;
     justify-content: center;
     align-items: center;
 }
+footer > h3 {
+    color: #393e45;
+}
 /* Aside*/
-.titulo > h2{
+.titulo>h2 {
     padding-top: 20px;
     padding-bottom: 20px;
     color: #000;
 }
 
 /* Cards*/
-.card{
+.card {
 
     width: 30%;
     height: 479;
@@ -71,20 +108,28 @@ footer{
     flex-direction: column;
 
 }
-.card > h2{
+
+.card>h2 {
     text-align: center;
+    margin-bottom:10px;
+    color: #393e45;
 }
-.card > img{
+
+.card>img {
     width: 100%;
     height: 100%;
 }
-.card > p{
+
+.card>p {
     text-align: center;
+    margin-bottom:10px 
 }
-.card > button{
-   width: 100%;
-   height: 40px;
-   background-color: #26537b;
-   color: #ffffff;
-   cursor: pointer;
+
+.card > button {
+    width: 100%;
+    height: 40px;
+    background-color: #26537b;
+    color: #ffffff;
+    cursor: pointer;
+    border: 0;
 }
