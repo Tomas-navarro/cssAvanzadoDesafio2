@@ -1,5 +1,2 @@
-> .[TIP].
-> Espero que tengas un lindo dia.
-> 
-> .[TIP].
+> .[!TIP].
 > Espero que tengas un lindo dia.
